@@ -5,26 +5,31 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Let's Buy a Jungle Bay",
-  description: "Monkey captains race to win a Jungle Bay NFT."
+  description: "Community raffle to buy a Jungle Bay NFT."
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-gradient-to-b from-cyan-500 via-blue-800 to-slate-950 text-white">
+      <body>
         <Providers>
-          <header className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-            <Link href="/" className="font-black">
-              🏝️ Monkey Harbor
-            </Link>
+          <header className="relative z-50 border-b border-white/10 bg-black">
+            <div className="mx-auto flex max-w-[1500px] items-center justify-between px-6 py-4">
+              <Link href="/" className="leading-none">
+                <div className="text-xs font-black">🌴 LET&apos;S BUY A</div>
+                <div className="text-2xl font-black text-lime-400">JUNGLE BAY</div>
+              </Link>
 
-            <nav className="hidden items-center gap-5 text-sm md:flex">
-              <Link href="/">Harbor</Link>
-              <Link href="/race">Race</Link>
-              <Link href="/admin">Admin</Link>
-            </nav>
+              <nav className="hidden items-center gap-8 text-sm md:flex">
+                <Link href="/">Home</Link>
+                <Link href="/race">Race 🏁</Link>
+                <Link href="#history">History</Link>
+                <Link href="#how">How It Works</Link>
+                <Link href="/admin">Admin</Link>
+              </nav>
 
-            <ConnectWallet />
+              <ConnectWallet />
+            </div>
           </header>
 
           {children}

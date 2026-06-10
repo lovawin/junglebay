@@ -1,41 +1,42 @@
-import Link from "next/link";
 import DepositPanel from "@/components/DepositPanel";
-import RoundStats from "@/components/RoundStats";
+import HowItWorks from "@/components/HowItWorks";
+import PotDashboard from "@/components/PotDashboard";
+import RecentRounds from "@/components/RecentRounds";
+import YachtScene from "@/components/YachtScene";
 
 export default function HomePage() {
   return (
-    <main className="mx-auto max-w-7xl px-6 py-12">
-      <section className="text-center">
-        <div className="text-8xl">🏝️</div>
+    <main className="min-h-screen bg-[#05080d] text-white">
+      <section className="mx-auto grid max-w-[1500px] gap-8 px-6 py-8 lg:grid-cols-[0.75fr_1.55fr]">
+        <div className="py-6">
+          <h1 className="text-5xl font-black leading-none md:text-7xl">
+            LET&apos;S BUY A
+            <span className="block text-lime-400">
+              JUNGLE BAY
+            </span>
+          </h1>
 
-        <h1 className="mt-6 text-6xl font-black">
-          LET&apos;S BUY A JUNGLE BAY
-        </h1>
+          <p className="mt-5 max-w-xl text-lg text-white/70">
+            The community raffle to purchase a Jungle Bay Yacht NFT.
+            One winner. Transparent. Verifiable. Onchain.
+          </p>
 
-        <p className="mx-auto mt-5 max-w-2xl text-xl text-white/80">
-          Join the fleet, fill the treasure chest, race to the island,
-          and win a Jungle Bay NFT.
-        </p>
-
-        <div className="mt-8 flex justify-center gap-4">
-          <Link
-            href="/race"
-            className="rounded-2xl bg-yellow-300 px-8 py-4 font-black text-slate-950"
-          >
-            Enter Race
-          </Link>
-
-          <Link
-            href="/admin"
-            className="rounded-2xl bg-white/10 px-8 py-4 font-black"
-          >
-            Admin
-          </Link>
+          <div className="mt-6">
+            <PotDashboard />
+          </div>
         </div>
+
+        <YachtScene />
       </section>
 
-      <RoundStats />
-      <DepositPanel />
+      <section id="enter" className="mx-auto max-w-[1500px] px-6">
+        <DepositPanel />
+      </section>
+
+      <section className="mx-auto grid max-w-[1500px] gap-8 px-6 pb-10 lg:grid-cols-2">
+        <HowItWorks />
+        <RecentRounds />
+      </section>
     </main>
   );
 }

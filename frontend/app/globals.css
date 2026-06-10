@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   min-height: 100vh;
+  background: #05080d;
+  color: white;
 }
