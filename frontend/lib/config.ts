@@ -4,4 +4,4 @@ export const RAFFLE_ADDRESS =
 
 export const OWNER_ADDRESS =
   (process.env.NEXT_PUBLIC_OWNER_ADDRESS ||
-    "0x6d127Aaee27B4E6608bd4E77350724F2E6F342A1").toLowerCase();
+    "0xf5313B03dDFa8EeffFb3fD9D2786b98aDb5B1149").toLowerCase();
