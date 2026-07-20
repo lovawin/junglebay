@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jungle Bay Raffle — Pitch Deck</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap');
+
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#050505; color:#fff; overflow-x:hidden; }
+
+.slide { min-height:100vh; display:flex; align-items:center; justify-content:center; padding:60px 40px; position:relative; }
+.slide-num { position:absolute; top:20px; right:30px; font-size:0.75rem; color:#166534; font-family:'Space Grotesk',monospace; }
+
+.jungle-bg { background:linear-gradient(180deg,#052e16 0%,#0a1a0a 50%,#050505 100%); }
+.bay-bg { background:linear-gradient(180deg,#083344 0%,#064e3b 50%,#052e16 100%); }
+.sunset-bg { background:linear-gradient(180deg,#7c2d12 0%,#92400e 30%,#052e16 70%,#050505 100%); }
+.dark-bg { background:#050505; }
+.sand-bg { background:linear-gradient(180deg,#854d0e 0%,#713f12 50%,#052e16 100%); }
+
+h1 { font-size:clamp(2.5rem,6vw,5rem); font-weight:900; line-height:1.05; letter-spacing:-0.03em; }
+h2 { font-size:clamp(2rem,4vw,3.5rem); font-weight:800; line-height:1.1; letter-spacing:-0.02em; }
+h3 { font-size:clamp(1.2rem,2vw,1.8rem); font-weight:700; }
+p { font-size:clamp(1rem,1.5vw,1.3rem); line-height:1.6; color:#d1d5db; }
+.accent-green { color:#22c55e; }
+.accent-gold { color:#facc15; }
+.accent-cyan { color:#22d3ee; }
+.glow-green { text-shadow:0 0 40px rgba(34,197,94,0.5); }
+.glow-gold { text-shadow:0 0 40px rgba(250,204,21,0.5); }
+.glow-cyan { text-shadow:0 0 40px rgba(34,211,238,0.5); }
+
+.card { background:rgba(5,46,22,0.5); backdrop-filter:blur(12px); border:1px solid rgba(34,197,94,0.15); border-radius:20px; padding:32px; }
+.card-gold { background:rgba(133,77,14,0.3); backdrop-filter:blur(12px); border:1px solid rgba(250,204,21,0.2); border-radius:20px; padding:32px; }
+.card-cyan { background:rgba(8,51,68,0.5); backdrop-filter:blur(12px); border:1px solid rgba(34,211,238,0.15); border-radius:20px; padding:32px; }
+
+.emoji-float { animation:float 3s ease-in-out infinite; display:inline-block; }
+@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-15px)} }
+
+.grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:32px; max-width:1200px; width:100%; }
+.grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; max-width:1200px; width:100%; }
+.grid-4 { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; max-width:1200px; width:100%; }
+
+.stat-big { font-size:clamp(3rem,5vw,4.5rem); font-weight:900; line-height:1; }
+.tag { display:inline-block; padding:6px 16px; border-radius:20px; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; }
+.tag-green { background:rgba(34,197,94,0.15); border:1px solid #22c55e; color:#4ade80; }
+.tag-gold { background:rgba(250,204,21,0.15); border:1px solid #facc15; color:#fde047; }
+.tag-cyan { background:rgba(34,211,238,0.15); border:1px solid #22d3ee; color:#67e8f9; }
+
+.divider { width:100%; max-width:600px; height:1px; background:linear-gradient(90deg,transparent,rgba(34,197,94,0.3),transparent); margin:20px auto; }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1: TITLE -->
+<section class="slide jungle-bg">
+<div class="slide-num">01</div>
+<div class="text-center">
+<div style="font-size:5rem" class="emoji-float">🏹🐒⛵🏝️</div>
+<h1 class="mt-6"><span class="accent-green glow-green">Jungle</span> <span class="accent-gold glow-gold">Bay</span></h1>
+<p class="mt-4" style="font-size:1.5rem;color:#86efac">The Gamified Token Raffle on Robinhood Chain</p>
+<div class="divider"></div>
+<p style="color:#4ade80">Burn tokens. Race monkeys. Win NFTs.</p>
+<div style="margin-top:40px">
+<span class="tag tag-green">Robinhood Chain</span>
+<span class="tag tag-gold">On-Chain Racing</span>
+<span class="tag tag-cyan">Community Driven</span>
+</div>
+</div>
+</section>
+
+<!-- SLIDE 2: THE PROBLEM -->
+<section class="slide dark-bg">
+<div class="slide-num">02</div>
+<div style="max-width:900px">
+<span class="tag tag-gold">The Problem</span>
+<h2 class="mt-6">Raffles are <span class="accent-gold">boring.</span><br>NFT giveaways have <span class="accent-green">no engagement.</span></h2>
+<div class="grid-2 mt-8">
+<div class="card">
+<h3 class="accent-gold"> 😐 Traditional Raffles</h3>
+<p class="mt-3" style="font-size:1rem">Buy ticket → wait → maybe win. No skill, no excitement, no reason to stay engaged. Users deposit and leave.</p>
+</div>
+<div class="card">
+<h3 class="accent-green"> 💤 NFT Giveaways</h3>
+<p class="mt-3" style="font-size:1rem">Follow + retweet to enter. Zero brand loyalty. Bots farm entries. Winners sell immediately. No community built.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- SLIDE 3: THE SOLUTION -->
+<section class="slide bay-bg">
+<div class="slide-num">03</div>
+<div style="max-width:900px;text-align:center">
+<span class="tag tag-cyan">The Solution</span>
+<h2 class="mt-6">Make raffles a <span class="accent-cyan glow-cyan">game.</span></h2>
+<p class="mt-4" style="max-width:600px;margin:0 auto">Jungle Bay turns a token burn raffle into an interactive monkey boat race. Users don't just buy tickets — they strategize, buy power-ups, and race for the prize.</p>
+<div class="grid-3" style="margin-top:48px">
+<div class="card-cyan">
+<div style="font-size:2.5rem" class="emoji-float">🐒</div>
+<h3 class="accent-cyan mt-3">Unique Monkeys</h3>
+<p style="font-size:0.95rem" class="mt-2">Each wallet gets a procedurally generated monkey & boat. No two racers are the same.</p>
+</div>
+<div class="card-cyan">
+<div style="font-size:2.5rem" class="emoji-float">🎁</div>
+<h3 class="accent-cyan mt-3">Power-Up Packs</h3>
+<p style="font-size:0.95rem" class="mt-2">Spend tokens to spin for speed boosts, shields, and shortcuts. Gamified spending = more burn.</p>
+</div>
+<div class="card-cyan">
+<div style="font-size:2.5rem" class="emoji-float">🏁</div>
+<h3 class="accent-cyan mt-3">On-Chain Race</h3>
+<p style="font-size:0.95rem" class="mt-2">Fair, deterministic race computation. More tokens locked = higher base speed, but power-ups level the field.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- SLIDE 4: HOW IT WORKS -->
+<section class="slide jungle-bg">
+<div class="slide-num">04</div>
+<div style="max-width:900px">
+<span class="tag tag-green">How It Works</span>
+<h2 class="mt-6">Six steps to <span class="accent-green glow-green">Jungle Bay.</span></h2>
+<div style="margin-top:40px;display:flex;flex-direction:column;gap:20px;max-width:700px">
+<div style="display:flex;gap:20px;align-items:flex-start">
+<div style="font-size:2rem;min-width:48px">1️⃣</div>
+<div><h3>Connect & Deposit</h3><p style="font-size:1rem">Users connect their wallet and deposit JUNGLE tokens into the escrow contract.</p></div>
+</div>
+<div style="display:flex;gap:20px;align-items:flex-start">
+<div style="font-size:2rem;min-width:48px">2️⃣</div>
+<div><h3>Get Your Monkey</h3><p style="font-size:1rem">A unique monkey and boat are generated from the wallet address. Stats, name, and appearance are deterministic.</p></div>
+</div>
+<div style="display:flex;gap:20px;align-items:flex-start">
+<div style="font-size:2rem;min-width:48px">3️⃣</div>
+<div><h3>Buy Power-Ups</h3><p style="font-size:1rem">Spend tokens on mystery packs. Spin for speed boosts, shields, and shortcuts. More packs = more burn.</p></div>
+</div>
+<div style="display:flex;gap:20px;align-items:flex-start">
+<div style="font-size:2rem;min-width:48px">4️⃣</div>
+<div><h3>Burn Goal Hit</h3><p style="font-size:1rem">When the community deposits enough tokens to hit the burn goal (0.13 ETH worth), the race begins.</p></div>
+</div>
+<div style="display:flex;gap:20px;align-items:flex-start">
+<div style="font-size:2rem;min-width:48px">5️⃣</div>
+<div><h3>Race on Chain</h3><p style="font-size:1rem">Smart contract computes race results deterministically. First monkey to Jungle Bay wins the NFT.</p></div>
+</div>
+<div style="display:flex;gap:20px;align-items:flex-start">
+<div style="font-size:2rem;min-width:48px">6️⃣</div>
+<div><h3>Safe Exit</h3><p style="font-size:1rem">Goal not met? Users withdraw their tokens back minus a 2% fee. Nobody gets rugged.</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- SLIDE 5: TOKENOMICS -->
+<section class="slide sunset-bg">
+<div class="slide-num">05</div>
+<div style="max-width:1000px;width:100%">
+<span class="tag tag-gold">Tokenomics</span>
+<h2 class="mt-6">The <span class="accent-gold glow-gold">burn</span> creates the <span class="accent-green glow-green">value.</span></h2>
+<div class="grid-2" style="margin-top:48px">
+<div class="card-gold">
+<h3 class="accent-gold">🔥 Burn Mechanism</h3>
+<p style="font-size:1rem" class="mt-3">Users deposit JUNGLE tokens to enter the raffle. When the burn goal is hit, ALL deposited tokens are burned to the zero address. Deflationary by design.</p>
+</div>
+<div class="card-gold">
+<h3 class="accent-gold">🛡️ Safety Valve</h3>
+<p style="font-size:1rem" class="mt-3">If the burn goal isn't reached before the deadline, users can withdraw their tokens minus a 2% fee. The fee funds the next raffle pool.</p>
+</div>
+</div>
+<div style="margin-top:32px;display:flex;gap:20px;flex-wrap:wrap;justify-content:center">
+<div class="card-gold text-center" style="min-width:200px">
+<div class="stat-big accent-gold glow-gold">0.1 ETH</div>
+<p style="font-size:0.9rem" class="mt-2">NFT Prize Value</p>
+</div>
+<div class="card-gold text-center" style="min-width:200px">
+<div class="stat-big accent-green glow-green">0.13 ETH</div>
+<p style="font-size:0.9rem" class="mt-2">Burn Goal</p>
+</div>
+<div class="card-gold text-center" style="min-width:200px">
+<div class="stat-big accent-cyan glow-cyan">2%</div>
+<p style="font-size:0.9rem" class="mt-2">Refund Fee</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- SLIDE 6: RACE MECHANICS -->
+<section class="slide bay-bg">
+<div class="slide-num">06</div>
+<div style="max-width:1000px;width:100%">
+<span class="tag tag-cyan">Race Mechanics</span>
+<h2 class="mt-6">Fair but <span class="accent-cyan glow-cyan">rewarding.</span></h2>
+<div class="grid-3" style="margin-top:40px">
+<div class="card-cyan">
+<div style="font-size:2rem">⚡</div>
+<h3 class="accent-cyan mt-3">Speed Boosts</h3>
+<p style="font-size:0.9rem" class="mt-2">Intensity 1-10. Each adds +25 base speed. Stack multiple for maximum velocity.</p>
+</div>
+<div class="card-cyan">
+<div style="font-size:2rem">🛡️</div>
+<h3 class="accent-cyan mt-3">Shields</h3>
+<p style="font-size:0.9rem" class="mt-2">Block random race hazards. Each shield reduces finish time penalty by 5%.</p>
+</div>
+<div class="card-cyan">
+<div style="font-size:2rem">🌊</div>
+<h3 class="accent-cyan mt-3">Shortcuts</h3>
+<p style="font-size:0.9rem" class="mt-2">Skip 10-30% of the race distance. The ultimate edge for savvy racers.</p>
+</div>
+</div>
+<div class="card-cyan" style="margin-top:32px;max-width:700px;margin-left:auto;margin-right:auto">
+<h3 class="accent-green">⚖️ The Fairness Model</h3>
+<p style="font-size:1rem" class="mt-2">Base speed scales logarithmically with tokens locked — whales have an advantage but it's diminishing. A small depositor with great power-ups can beat a whale with none. Deterministic on-chain computation using wallet + tokens + power-ups + block data as seed.</p>
+</div>
+</div>
+</section>
+
+<!-- SLIDE 7: MARKET -->
+<section class="slide dark-bg">
+<div class="slide-num">07</div>
+<div style="max-width:900px">
+<span class="tag tag-green">Market Opportunity</span>
+<h2 class="mt-6">Robinhood Chain is <span class="accent-green glow-green">exploding.</span></h2>
+<div class="grid-4" style="margin-top:40px">
+<div class="card text-center">
+<div class="stat-big accent-green glow-green">$1B+</div>
+<p style="font-size:0.85rem" class="mt-2">DEX Volume (18 days)</p>
+</div>
+<div class="card text-center">
+<div class="stat-big accent-gold glow-gold">$135M</div>
+<p style="font-size:0.85rem" class="mt-2">TVL in 2 weeks</p>
+</div>
+<div class="card text-center">
+<div class="stat-big accent-cyan glow-cyan">47K</div>
+<p style="font-size:0.85rem" class="mt-2">Tokens in 1 day</p>
+</div>
+<div class="card text-center">
+<div class="stat-big accent-green glow-green">18d</div>
+<p style="font-size:0.85rem" class="mt-2">Chain Age</p>
+</div>
+</div>
+<p style="max-width:600px;margin:40px auto 0" class="text-center">Robinhood Chain launched July 1, 2026. It's the newest EVM L2 with explosive meme coin activity but ZERO gamified raffle platforms. Jungle Bay fills that gap.</p>
+</div>
+</section>
+
+<!-- SLIDE 8: REVENUE -->
+<section class="slide sand-bg">
+<div class="slide-num">08</div>
+<div style="max-width:900px">
+<span class="tag tag-gold">Revenue Model</span>
+<h2 class="mt-6">Three ways to <span class="accent-gold glow-gold">earn.</span></h2>
+<div style="display:flex;flex-direction:column;gap:24px;margin-top:40px;max-width:700px">
+<div class="card-gold">
+<div style="display:flex;gap:16px;align-items:center">
+<div style="font-size:2rem">🔥</div>
+<div><h3 class="accent-gold">Burn Premium</h3><p style="font-size:1rem" class="mt-1">NFT worth 0.1 ETH, burn goal 0.13 ETH. The 0.03 ETH gap is project revenue per raffle cycle.</p></div>
+</div>
+</div>
+<div class="card-gold">
+<div style="display:flex;gap:16px;align-items:center">
+<div style="font-size:2rem">📦</div>
+<div><h3 class="accent-gold">Power-Up Pack Sales</h3><p style="font-size:1rem" class="mt-1">Each pack costs 1000 JNG tokens. A portion of pack revenue goes to the project treasury.</p></div>
+</div>
+</div>
+<div class="card-gold">
+<div style="display:flex;gap:16px;align-items:center">
+<div style="font-size:2rem">💸</div>
+<div><h3 class="accent-gold">Refund Fees</h3><p style="font-size:1rem" class="mt-1">2% fee on all unsuccessful raffle withdrawals. Funds the next raffle pool and project operations.</p></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- SLIDE 9: ROADMAP -->
+<section class="slide jungle-bg">
+<div class="slide-num">09</div>
+<div style="max-width:900px">
+<span class="tag tag-green">Roadmap</span>
+<h2 class="mt-6">The path to <span class="accent-green glow-green">Jungle Bay.</span></h2>
+<div style="margin-top:40px;display:flex;flex-direction:column;gap:24px;max-width:700px">
+<div style="display:flex;gap:20px;align-items:flex-start">
+<div style="min-width:80px;text-align:center"><span class="tag tag-green">Q3 2026</span></div>
+<div><h3>🚀 Launch</h3><p style="font-size:1rem" class="mt-1">Token launch on Pons.family, smart contract deployment, frontend launch with first raffle cycle.</p></div>
+</div>
+<div style="display:flex;gap:20px;align-items:flex-start">
+<div style="min-width:80px;text-align:center"><span class="tag tag-gold">Q4 2026</span></div>
+<div><h3>🏝️ Multi-Raffle</h3><p style="font-size:1rem" class="mt-1">Multiple concurrent raffles, leaderboards, seasonal Jungle Bay tournaments with bigger NFT prizes.</p></div>
+</div>
+<div style="display:flex;gap:20px;align-items:flex-start">
+<div style="min-width:80px;text-align:center"><span class="tag tag-cyan">Q1 2027</span></div>
+<div><h3>🐒 Monkey NFTs</h3><p style="font-size:1rem" class="mt-1">Winning monkeys become tradeable NFTs. Monkey stats carry across raffles. Breed, train, and trade.</p></div>
+</div>
+<div style="display:flex;gap:20px;align-items:flex-start">
+<div style="min-width:80px;text-align:center"><span class="tag tag-green">Q2 2027</span></div>
+<div><h3>🎮 Full Game</h3><p style="font-size:1rem" class="mt-1">Interactive race controls, live spectating, betting on other racers, mobile app.</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- SLIDE 10: CTA -->
+<section class="slide sunset-bg">
+<div class="slide-num">10</div>
+<div style="text-align:center;max-width:700px">
+<div style="font-size:5rem" class="emoji-float">🏹🐒🏝️</div>
+<h1 class="mt-6"><span class="accent-gold glow-gold">Ready to race?</span></h1>
+<p class="mt-4">Jungle Bay is the first gamified token raffle on Robinhood Chain. Deposit, spin, race, and burn your way to NFT glory.</p>
+<div class="divider" style="margin-top:40px"></div>
+<div style="margin-top:32px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+<span class="tag tag-gold" style="font-size:1rem;padding:12px 24px">Launch on Pons.family</span>
+<span class="tag tag-green" style="font-size:1rem;padding:12px 24px">Robinhood Chain Native</span>
+<span class="tag tag-cyan" style="font-size:1rem;padding:12px 24px">Community First</span>
+</div>
+<p style="margin-top:48px;color:#4ade80;font-size:0.9rem">Jungle Bay Raffle — Built by Robin Hood Hunters 🏹</p>
+</div>
+</section>
+
+</body>
+</html>

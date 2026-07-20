@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --jungle-bg: #0a1a0a;
+  --bay-bg: #0a1929;
+  --sand: #eab308;
+  --gold: #fde047;
+}
+
+body {
+  background: linear-gradient(180deg, #0a1929 0%, #0a1a0a 50%, #052e16 100%);
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.ocean-bg {
+  background: linear-gradient(180deg, #083344 0%, #064e3b 60%, #052e16 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.ocean-bg::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(34, 211, 238, 0.05) 0px,
+    rgba(34, 211, 238, 0.05) 2px,
+    transparent 2px,
+    transparent 20px
+  );
+  animation: wave 3s ease-in-out infinite;
+}
+
+.palm-tree {
+  position: absolute;
+  font-size: 3rem;
+  opacity: 0.3;
+  animation: float 4s ease-in-out infinite;
+}
+
+.pack-glow {
+  box-shadow: 0 0 60px rgba(250, 204, 21, 0.4), 0 0 120px rgba(250, 204, 21, 0.2);
+}
+
+.pack-shake {
+  animation: shake 0.5s ease-in-out infinite;
+}
+
+.btn-jungle {
+  background: linear-gradient(135deg, #15803d 0%, #166534 100%);
+  border: 1px solid #22c55e;
+  color: #f0fdf4;
+  padding: 12px 32px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 20px rgba(34, 197, 94, 0.2);
+}
+
+.btn-jungle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 30px rgba(34, 197, 94, 0.4);
+}
+
+.btn-bay {
+  background: linear-gradient(135deg, #0e7490 0%, #155e75 100%);
+  border: 1px solid #22d3ee;
+  color: #ecfeff;
+  padding: 12px 32px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-bay:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 30px rgba(34, 211, 238, 0.4);
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, #eab308 0%, #facc15 100%);
+  border: 1px solid #fde047;
+  color: #422006;
+  padding: 12px 32px;
+  border-radius: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 20px rgba(250, 204, 21, 0.3);
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 30px rgba(250, 204, 21, 0.5);
+}
+
+.card-jungle {
+  background: rgba(5, 46, 22, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.glow-text {
+  text-shadow: 0 0 20px rgba(34, 197, 94, 0.5);
+}
+
+.glow-gold {
+  text-shadow: 0 0 20px rgba(250, 204, 21, 0.6);
+}
+
+.monkey-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4ade80 0%, #facc15 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  border: 3px solid #22c55e;
+  box-shadow: 0 0 30px rgba(34, 197, 94, 0.3);
+}
+
+.boat-icon {
+  font-size: 2.5rem;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+}
+
+.race-track {
+  background: linear-gradient(180deg, #064e3b 0%, #083344 50%, #0e7490 100%);
+  border-radius: 20px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+.race-lane {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.racer-token {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: margin-left 0.3s ease-out;
+}
+
+.power-up-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.power-speed { background: rgba(239, 68, 68, 0.2); border: 1px solid #ef4444; color: #fca5a5; }
+.power-shield { background: rgba(59, 130, 246, 0.2); border: 1px solid #3b82f6; color: #93c5fd; }
+.power-shortcut { background: rgba(168, 85, 247, 0.2); border: 1px solid #a855f7; color: #c4b5fd; }
+
+.progress-bar {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #22c55e 0%, #facc15 50%, #ef4444 100%);
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
